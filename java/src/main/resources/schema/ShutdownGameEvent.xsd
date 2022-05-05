@@ -1,0 +1,10 @@
+<xs:schema version="1.0.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:include schemaLocation="Shared.xsd"/>
+
+    <xs:element name="ShutdownGameEvent">
+        <xs:complexType>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
