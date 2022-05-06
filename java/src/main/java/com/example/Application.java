@@ -45,6 +45,7 @@ public class Application {
         client.register(Application::onInitGameEvent, InitGameEvent.class);
         client.register(Application::onKillEvent, KillEvent.class);
         client.register(Application::onSayEvent, SayEvent.class);
+        client.register(Application::onSendingGameReportEvent, SendingGameReportEvent.class);
         client.register(Application::onShutdownGameEvent, ShutdownGameEvent.class);
 
         LOG.info("Connecting to MQTT broker");
@@ -81,6 +82,10 @@ public class Application {
 
     static void onSayEvent(SayEvent event) {
         LOG.info("onSayEvent");
+    }
+
+    static void onSendingGameReportEvent(SendingGameReportEvent event) {
+        LOG.info("onSendingGameReportEvent");
     }
 
     static void onShutdownGameEvent(ShutdownGameEvent event) {
