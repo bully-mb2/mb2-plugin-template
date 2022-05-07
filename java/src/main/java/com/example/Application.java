@@ -34,6 +34,7 @@ public class Application {
         client.putEventListener(Application::onInitGameEvent, InitGameEvent.class);
         client.putEventListener(Application::onKillEvent, KillEvent.class);
         client.putEventListener(Application::onSayEvent, SayEvent.class);
+        client.putEventListener(Application::onServerInitializationEvent, ServerInitializationEvent.class);
         client.putEventListener(Application::onSendingGameReportEvent, SendingGameReportEvent.class);
         client.putEventListener(Application::onShutdownGameEvent, ShutdownGameEvent.class);
 
@@ -71,6 +72,10 @@ public class Application {
 
     static void onSayEvent(SayEvent event) {
         LOG.info("onSayEvent");
+    }
+
+    static void onServerInitializationEvent(ServerInitializationEvent event) {
+        LOG.info("onServerInitializationEvent");
     }
 
     static void onSendingGameReportEvent(SendingGameReportEvent event) {
