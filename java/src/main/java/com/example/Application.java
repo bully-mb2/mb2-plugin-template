@@ -38,6 +38,7 @@ public class Application {
         client.putEventListener(Application::onServerInitializationEvent, ServerInitializationEvent.class);
         client.putEventListener(Application::onSendingGameReportEvent, SendingGameReportEvent.class);
         client.putEventListener(Application::onShutdownGameEvent, ShutdownGameEvent.class);
+        client.putEventListener(Application::onFragLimitHitEvent, FragLimitHitEvent.class);
 
         LOG.info("Connecting to MQTT broker");
         client.connect(uri, topic);
@@ -89,6 +90,10 @@ public class Application {
 
     static void onShutdownGameEvent(ShutdownGameEvent event) {
         LOG.info("onShutdownGameEvent");
+    }
+
+    static void onFragLimitHitEvent(FragLimitHitEvent event) {
+        LOG.info("onFragLimitHitEvent");
     }
 
 }
