@@ -11,13 +11,6 @@ java -jar mb2-<<Plugin Name>>-VERSION.jar
 ```
 After your first run a settings file will be generated next to the jar. Fill your credentials there and run again.
 
-# Developing
-To start developing generate your sources by running 
-```
-./mvn jaxb2:generate
-```
-Run this command every time the schema updates
-
 
 ## License
 <<Plugin Name>>  is licensed under GPLv2 as free software. You are free to use, modify and redistribute <<Plugin Name>> following the terms in LICENSE.txt
