@@ -1,8 +1,8 @@
 package com.example;
 
+import com.templars_server.mb2_log_reader.schema.*;
 import com.templars_server.util.mqtt.MBMqttClient;
 import com.templars_server.util.settings.Settings;
-import generated.*;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
